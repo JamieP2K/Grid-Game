@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('startButton');
     const addPlayerButton = document.getElementById('addPlayerButton');
     const playerList = document.getElementById('playerList');
-    const mainMenu = document.getElementById('mainMenu');
-    const canvasContainer = document.getElementById('canvasContainer');
 
     addPlayerButton.addEventListener('click', function() {
         const playerName = prompt("Enter player's name:");
@@ -25,11 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startButton.addEventListener('click', function() {
         const playerItems = playerList.getElementsByTagName('div');
         if (playerItems.length >= 2) {
-            mainMenu.style.display = 'none';
-            canvasContainer.style.display = 'block';
-            if (window.initializeCanvas) {
-                window.initializeCanvas();
-            }
+            window.location.href = 'gridSetup.html'; // Redirects to gridSetup.html
         } else {
             alert('Please add at least two players to start the game.');
         }
