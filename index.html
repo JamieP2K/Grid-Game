@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canvas Grid Example</title>
     <style>
-        #canvasContainer {
-            display: none;
-            text-align: center;
-        }
+      #canvasContainer {
+        display: none;
+        text-align: center;
+      }
 
-        canvas {
-            border: 1px solid #000;
-        }
+      canvas {
+        border: 1px solid #000;
+      }
 
-        #mainMenu {
-            color: white;
-            text-align: center;
-            background-image: url('Assets/Images/Menu.png'); /* Update with the correct path */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: bottom center; /* Centers the image */
-            text-align: center;
-            padding-bottom: 200px;
-            min-height: 1000px;
-        }
+      #mainMenu {
+        color: white;
+        text-align: center;
+        background-image: url("Assets/Images/Menu.png"); /* Update with the correct path */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom center; /* Centers the image */
+        text-align: center;
+        padding-bottom: 200px;
+        min-height: 1000px;
+      }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        #playerList {
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #playerList {
         margin-bottom: 20px;
-    }
+      }
 
-    #playerList div {
+      #playerList div {
         margin: 5px 0;
         font-size: 16px;
-    }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="mainMenu">
-        <h1><u>Grid Game</u></h1>
-        <h2>Enter names and press play to begin</h2>
+      <h1><u>Grid Game</u></h1>
+      <h2>Enter names and press play to begin</h2>
 
-        <div id="playerList">
-            <h2>Players:</h2>
-            <!-- Player names will be listed here -->
-        </div>
+      <div id="playerList">
+        <h2>Players:</h2>
+        <!-- Player names will be listed here -->
+      </div>
 
-        <button id="addPlayerButton">Add Player</button>
-        <button id="startButton">Start Game</button>
+      <button id="addPlayerButton">Add Player</button>
+      <button id="startButton">Start Game</button>
     </div>
 
-    <div id="canvasContainer" style="display:none;">
-        <h1>GRID SETUP FOR GAME</h1>
-        <canvas id="gridCanvas" width="400" height="1200"></canvas>
+    <div id="canvasContainer" style="display: none">
+      <h1>GRID SETUP FOR GAME</h1>
+      <canvas id="gridCanvas" width="400" height="1200"></canvas>
     </div>
 
     <script src="mainMenu.js"></script>
     <script src="gridSetup.js"></script>
-</body>
+  </body>
 </html>

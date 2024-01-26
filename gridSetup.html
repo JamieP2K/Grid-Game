@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canvas Grid Example - Grid Setup</title>
     <style>
-        #canvasContainer {
-            text-align: center;
-        }
+      #canvasContainer {
+        text-align: center;
+      }
 
-        canvas {
-            border: 1px solid #000;
-        }
+      canvas {
+        border: 1px solid #000;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="canvasContainer">
-        <h1>GRID SETUP FOR GAME</h1>
-        <canvas id="gridCanvas" width="400" height="1200"></canvas>
+      <h1>GRID SETUP FOR GAME</h1>
+      <canvas id="gridCanvas" width="400" height="1200"></canvas>
     </div>
 
     <script src="gridSetup.js"></script>
-</body>
+    <script>
+      window.onload = function () {
+        initializeCanvas();
+      };
+    </script>
+  </body>
 </html>
