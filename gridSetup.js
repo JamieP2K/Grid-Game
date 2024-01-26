@@ -1,3 +1,6 @@
+let playerCount = playerItems.length;
+let gameState = false;
+
 // Get the canvas element and its context
 function initializeCanvas() {
   let canvas = document.getElementById("gridCanvas");
@@ -20,6 +23,9 @@ function initializeCanvas() {
     2: "#FF0000", // Player 1
     3: "#00ff00", // Player 2
     4: "#0000ff", // Player 3
+    5: "#ffff00", // Player 4
+    6: "#ff00ff", // Player 5
+    7: "#00ffff", // Player 6
     //TODO Add more mappings as needed
   };
 
@@ -83,11 +89,8 @@ function initializeCanvas() {
     }
   }
 
-  //! use later to listen for clicks when players are selected
-  canvas.addEventListener("click", handleCanvasClick);
-
   // Function to handle canvas click events
-  function handleCanvasClick(event) {
+  function handleCanvasClick(event, player) {
     // Calculate the grid cell that was clicked
     const mouseX = event.clientX - canvas.getBoundingClientRect().left;
     const mouseY = event.clientY - canvas.getBoundingClientRect().top;
@@ -97,15 +100,25 @@ function initializeCanvas() {
 
     // Toggle the color of the clicked cell
     if (numberGrid[clickedCellY][clickedCellX] === 0) {
-      numberGrid[clickedCellY][clickedCellX] = 1; // Change to a wall color, for example
-    } else {
-      numberGrid[clickedCellY][clickedCellX] = 0; // Change back to the floor color
+      numberGrid[clickedCellY][clickedCellX] = player; // Change to a player color
     }
 
     // Redraw the grid with the updated colors
     populateGrid();
   }
+
+  function playerTurn(){
+    let player = 2;
+    while(gameState){      
+        //change colour of player desired position
+        canvas.addEventListener("click", function(event){
+            handleCanvasClick(event, player);
+        });
+
+    }
+  }
   populateGrid();
+
 }
 
 // Expose the initializeCanvas function to be callable globally
