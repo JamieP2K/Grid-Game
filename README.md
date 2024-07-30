@@ -1,5 +1,5 @@
 # Grid-Game
 
-Neato little drinking game.
+A board game that can be played in a party setting.
 
-Loot drinks, drink drinks, give drinks. It's all fun.
+Developed for 2-5 players.
